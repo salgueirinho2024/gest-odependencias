@@ -1,5 +1,5 @@
 {
-  "scripts": {
-    "build": "npm run webpack"
+    "scripts": {
+      "build": "npm run webpack"
+    }
   }
-}
