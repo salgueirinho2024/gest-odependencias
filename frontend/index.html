@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Pendências</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagens/seu_icone_aqui.ico">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Pendências</h1>
+        <img src="imagens/seu_logotipo_aqui.png" alt="Logotipo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pendencias.html">Pendências Concluídas</a>
+        </nav>
+    </header>
+    <main>
+        <section id="cadastro">
+            <h2>Cadastrar Empresa e Pendência</h2>
+            <form id="cadastroForm">
+                <label for="empresa">Nome da Empresa:</label>
+                <input type="text" id="empresa" required>
+                
+                <label for="pendencia">Pendência Resolvida:</label>
+                <textarea id="pendencia" required></textarea>
+                
+                <label for="categoria">Categoria:</label>
+                <select id="categoria">
+                    <option value="LTCAT">LTCAT</option>
+                    <option value="PGR">PGR</option>
+                    <option value="LTIP">LTIP</option>
+                </select>
+                
+                <label for="imagem">Adicionar Foto:</label>
+                <input type="file" id="imagem" accept="image/*">
+                
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+        <section id="pendencias">
+            <h2>Pendências Resolvidas</h2>
+            <div id="pendenciasList"></div>
+        </section>
+    </main>
+
+    <!-- Modal de Edição -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Pendência</h2>
+            <form id="editForm">
+                <label for="editEmpresa">Nome da Empresa:</label>
+                <input type="text" id="editEmpresa" required>
+                
+                <label for="editPendencia">Pendência Resolvida:</label>
+                <textarea id="editPendencia" required></textarea>
+                
+                <label for="editCategoria">Categoria:</label>
+                <select id="editCategoria">
+                    <option value="LTCAT">LTCAT</option>
+                    <option value="PGR">PGR</option>
+                    <option value="LTIP">LTIP</option>
+                </select>
+                
+                <label for="editImagem">Adicionar Foto:</label>
+                <input type="file" id="editImagem" accept="image/*">
+                
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
